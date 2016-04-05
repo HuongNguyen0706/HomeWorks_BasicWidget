@@ -1,6 +1,7 @@
 package vn.edu.techkids.homeworks_basicwidget;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnBirthday;
     Calendar calendar;
     Date dateFinish;
+    Button btnSave;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,6 +49,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 showDatePickerDialog();
                 getDateFormat();
+            }
+        });
+
+        btnSave = (Button)findViewById(R.id.btnSave);
+        btnSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(MainActivity.this, SaveActivity.class);
+                startActivity(myIntent);
             }
         });
 
