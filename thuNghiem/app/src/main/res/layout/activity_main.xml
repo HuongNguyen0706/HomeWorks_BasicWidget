@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B9F6CA"
+    tools:context="vn.edu.techkids.thunghiem.MainActivity">
+
+    <ImageView
+        android:id="@+id/ivsky"
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        android:src="@mipmap/linhtinh"
+        />
+    <FrameLayout
+        android:id="@+id/fl1"
+        android:layout_width="350dp"
+        android:layout_height="500dp"
+        android:layout_gravity="left|bottom"
+        >
+
+        <ImageView
+            android:id="@+id/iv1"
+            android:layout_width="match_parent"
+            android:layout_height="420dp"
+            android:src="@mipmap/doremon"
+            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#1A237E">
+        <ImageButton
+            android:id="@+id/iBtnClose1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/closeicon"
+            android:layout_gravity="right|top"
+            android:layout_alignParentRight="true"
+            android:background="#E53935"
+            />
+        </RelativeLayout>
+
+    </FrameLayout>
+    <FrameLayout
+        android:id="@+id/fl2"
+        android:layout_width="365dp"
+        android:layout_height="450dp"
+        android:layout_gravity="center|bottom"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#1A237E">
+        <ImageButton
+            android:id="@+id/iBtnClose2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/closeicon"
+            android:layout_gravity="right|top"
+            android:layout_alignParentRight="true"
+            android:background="#E53935"
+            />
+        </RelativeLayout>
+        <ImageView
+            android:id="@+id/iv2"
+            android:layout_width="match_parent"
+            android:layout_height="440dp"
+            android:src="@mipmap/doremon"
+            />
+
+
+    </FrameLayout>
+    <FrameLayout
+        android:id="@+id/fl3"
+        android:layout_width="360dp"
+        android:layout_height="400dp"
+        android:layout_gravity="right|bottom"
+        >
+
+
+        <ImageView
+            android:id="@+id/iv3"
+            android:layout_width="match_parent"
+            android:layout_height="390dp"
+            android:src="@mipmap/hina1"
+            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#1A237E">
+        <ImageButton
+            android:id="@+id/iBtnClose3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/closeicon"
+            android:layout_gravity="right|top"
+            android:layout_alignParentRight="true"
+            android:background="#E53935"
+            />
+        </RelativeLayout>
+
+    </FrameLayout>
+    <Button
+        android:id="@+id/btnShow"
+        android:layout_width="185dp"
+        android:layout_height="wrap_content"
+        android:text="Show"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_gravity="left|bottom"
+        android:background="#E91E63"
+        />
+    <Button
+        android:id="@+id/btnHide"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Hide"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:background="#EEFF41"
+        android:layout_gravity="right|bottom"
+
+
+        />
+</FrameLayout>

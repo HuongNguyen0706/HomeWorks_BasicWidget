@@ -10,13 +10,18 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
+import java.text.StringCharacterIterator;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
+import java.util.Vector;
 
 public class MainActivity extends AppCompatActivity {
     String arr[] = {"Ha noi", "Thai Nguyen", "Nam Dinh", "Thai Binh", "Lang Son"};
@@ -27,12 +32,14 @@ public class MainActivity extends AppCompatActivity {
     Calendar calendar;
     Date dateFinish;
     Button btnSave;
+    ArrayList<Employee> employeeArrayList;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         address = (TextView)findViewById(R.id.txtAddress);
-        spinner = (Spinner)findViewById(R.id.spinnerAddress);
+        spinner = (Spinner)findViewById(R.id.spinner);
         //gan data source arr vao adapter
         ArrayAdapter<String> adapter = new ArrayAdapter<String>
                 (this, android.R.layout.simple_spinner_item,arr);
@@ -43,23 +50,30 @@ public class MainActivity extends AppCompatActivity {
         //thiet lap su kien chon phan tu cho Spinner
         txtBirthday = (TextView)findViewById(R.id.txtBirthday);
         btnBirthday = (Button)findViewById(R.id.btnBirthday);
-        btnBirthday.setOnClickListener(new View.OnClickListener(){
+            btnBirthday.setOnClickListener(new View.OnClickListener() {
 
-            @Override
-            public void onClick(View v) {
-                showDatePickerDialog();
-                getDateFormat();
-            }
-        });
+                @Override
+                public void onClick(View v) {
+                    showDatePickerDialog();
+                    getDateFormat();
+                }
+            });
 
-        btnSave = (Button)findViewById(R.id.btnSave);
-        btnSave.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent myIntent = new Intent(MainActivity.this, SaveActivity.class);
-                startActivity(myIntent);
-            }
-        });
+        btnSave = (Button)
+
+            findViewById(R.id.btnSave);
+
+            btnSave.setOnClickListener(new View.OnClickListener()
+
+            {
+                @Override
+                public void onClick(View v) {
+                    Intent myIntent = new Intent(MainActivity.this, SaveActivity.class);
+                    startActivity(myIntent);
+                }
+            });
+
+
 
 
 
@@ -86,14 +100,14 @@ public class MainActivity extends AppCompatActivity {
         };
 
         //Cac lenh duoi nay xu ly ngay gio trong DatepicketDialog
-        String s = btnBirthday.getText()+"";
-        String strArrtmp[] = s.split("/");
-        int ngay = Integer.parseInt(strArrtmp[0]);
-        int thang = Integer.parseInt(strArrtmp[1]);
-        int nam = Integer.parseInt(strArrtmp[2]);
-        DatePickerDialog datePickerDialog = new DatePickerDialog(MainActivity.this, callback, nam, thang, ngay);
-        datePickerDialog.setTitle("Chon ngay sinh cua ban");
-        datePickerDialog.show();
+//        String s = btnBirthday.getText()+"";
+//        String Arrtmp[] = s.split("/");
+//        int date = Integer.getInteger(Arrtmp[0]);
+//        int month = Integer.getInteger(Arrtmp[1]);
+//        int year = Integer.getInteger(Arrtmp[2]);
+//        DatePickerDialog datePickerDialog = new DatePickerDialog(MainActivity.this, callback, year, month, date);
+//        datePickerDialog.setTitle("Chon ngay sinh cua ban");
+//        datePickerDialog.show();
 
     }
     //ham dinh dang ngay/thang/namm
