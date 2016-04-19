@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">PraticeListView_Assigment5</string>
+    <string name="name">Name</string>
+    <string name="Name">Name:</string>
+    <string name="age">Age</string>
+    <string name="Age">Age:</string>
+    <string name="job">Job:</string>
+    <string name="detail">Detail</string>
+    <string-array name="place">
+        <item>Ha Noi</item>
+        <item>Thai Nguyen</item>
+        <item>Nam Dinh</item>
+        <item>Bac Ninh</item>
+        <item>Thai Binh</item>
+        <item>Nha Trang</item>
+        <item>Vung Tau</item>
+        <item>Tuyen Quang</item>
+        <item>Lang Son</item>
+    </string-array>
+
+</resources>
